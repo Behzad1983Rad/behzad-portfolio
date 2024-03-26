@@ -3,20 +3,13 @@ import { Container } from 'reactstrap';
 import AboutIcon from "../../assets/images/AboutIcon.jpg";
 
 function About() {
-  // const handleDownload = () => {
-  //   // Replace the '#' with the actual URL of your CV
-  //   window.open("URL_of_your_CV.pdf", "_blank");
-  // };
+ 
 
   return (
     <>
       <div className="beny_tm_about" id="about">
         <Container>
-          {/* <div className="beny_tm_title_holder" data-aos="fade-up">
-            <span style={{fontSize: "200 px"}}>About Me</span>
-            <h3>About Me</h3>
-           
-          </div> */}
+      
            <div className="section-title"  data-aos="fade-up">
                 <h2>About Me</h2>
               </div>

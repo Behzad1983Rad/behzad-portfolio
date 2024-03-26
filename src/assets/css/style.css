@@ -3049,6 +3049,9 @@ li.dropdown.nav-item {
 	background-color: #34bed0;
 	animation: blink 1s infinite;
 	margin: 0 0 0 5px;
+	font-size: 1em; 
+	vertical-align: middle;
+	margin-left: 5px;
   }
   
   @keyframes blink {

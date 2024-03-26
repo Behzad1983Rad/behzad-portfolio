@@ -3,8 +3,7 @@ import { Navbar, Nav, NavItem, NavLink, Container, NavbarToggler, Collapse } fro
 
 function Header() {
   const [scrollY, setScrollY] = useState(0);
-  const [isOpen, setIsOpen] = useState(false); // Add isOpen state
-
+  const [isOpen, setIsOpen] = useState(false); 
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -12,7 +11,6 @@ function Header() {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up the event listener
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -36,8 +34,7 @@ function Header() {
         contact: document.getElementById('contact')?.offsetTop,
       };
 
-      const scrollPosition = window.scrollY + 100; // Add some offset for better accuracy
-
+      const scrollPosition = window.scrollY + 100; 
       let currentSection = '';
       for (const [key, value] of Object.entries(sectionOffsets)) {
         if (value !== null && scrollPosition >= value) {
@@ -49,7 +46,6 @@ function Header() {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up the event listener
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };

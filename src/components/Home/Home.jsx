@@ -2,14 +2,15 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 
 import Lottie from 'react-lottie';
-import animationData from './lottie.json'; // Replace 'your-animation.json' with your actual JSON file
+import animationData from './lottie.json'; 
 
 function Banner() {
   const [text, setText] = useState('');
   const [index, setIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
-  const texts = useMemo(() => ["Web Developer", "Eager to Innovate", "Full Stack Developer"], []);
+  const texts = useMemo(() => ["Web Developer", "Eager to Innovate", ""], []);
 
+  const [fontSize, setFontSize] = useState('1.5em'); 
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -19,13 +20,21 @@ function Banner() {
         setTimeout(() => {
           setText('');
           setIndex((index + 1) % texts.length);
-        }, 2000); // Wait 2 seconds before switching to the next text
+          
+          const currentText = texts[index];
+          if (currentText === "Web Developer" || currentText === "Eager to Innovate") {
+            setFontSize('1.5em');
+          } else {
+            setFontSize('2em');
+          }
+
+        }, 2000);
       }
-    }, 150); // Typing speed: 150 milliseconds per character
+    }, 150); 
   
     const cursorInterval = setInterval(() => {
       setShowCursor((prevShowCursor) => !prevShowCursor);
-    }, 500); // Cursor blink speed: 500 milliseconds
+    }, 500); 
   
     return () => {
       clearInterval(interval);
@@ -52,11 +61,11 @@ function Banner() {
 
               <div className="content"  data-aos="fade-up">
                 <div className="content_inner">
-                  {/* Add fade-in animation class */}
-                  <h3 className="name animated fadeIn"><strong>Hi! I'm Behzad</strong></h3>
-                  <h3 className="job animated fadeIn">
+                
+                  <h1 className="name animated fadeIn" style={{ fontSize: '2em' }}><strong>Hi! I'm Behzad</strong></h1>
+                  <h3 className="job animated fadeIn" style={{ fontSize: fontSize }}>
                     {text}<span className={showCursor ? 'cursor-blink' : ''}></span><br />
-                    <span>Based In London</span>
+                    <span>Full-Stack Developer</span>
                   </h3>
                   <p className="text animated fadeIn">
                   I'm a Full-Stack Developer proficient in both frontend and backend development, as well as database management. I am passionate about creating user-friendly experiences and building excellent software that enhances the lives of those around me.                  

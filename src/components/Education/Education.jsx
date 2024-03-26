@@ -2,8 +2,7 @@ import React from 'react';
 import { Container } from 'reactstrap';
 import AboutIcon2 from "../../assets/images/award.svg";
 import Lottie from 'react-lottie';
-import animationData from './lottie.json'; // Replace 'your-animation.json' with your actual JSON file
-
+import animationData from './lottie.json'; 
 function Education() {
 
   const defaultOptions = {

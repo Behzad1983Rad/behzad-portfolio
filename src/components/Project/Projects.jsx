@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, } from 'reactstrap';
-import './Projects.css'; // Import CSS file for styling
+import './Projects.css'; 
 import GitIcon from "../../assets/images/github.png";
 import WebIcon from "../../assets/images/link.png";
 import ReadmoreIcon from "../../assets/images/001-add.png";
@@ -12,10 +12,9 @@ import ProjectIcon4 from "../../assets/images/6.PNG";
 
 
 function Projects() {
-  const [showGallery, setShowGallery] = useState(false); // State to control gallery visibility
-  const [selectedProject, setSelectedProject] = useState(null); // State to store selected project
+  const [showGallery, setShowGallery] = useState(false); 
+  const [selectedProject, setSelectedProject] = useState(null); 
 
-  // Array containing project data (image source, title, description, GitHub link, web link)
   const projects = [
     {
       imageSrc: ProjectIcon1,
@@ -57,7 +56,6 @@ function Projects() {
       websiteLink: 'https://freelanceapp-frontend-production.up.railway.app/',
       skills: ['React JS', 'Javascript', 'HTML5', 'Django', 'Python', 'PostgreSQL', 'Django REST Framework', 'AWS']
     },
-    // Add more projects as needed
   ];
 
   const truncateDescription = (description) => {
@@ -69,7 +67,6 @@ function Projects() {
     }
   };
 
-  // Function to handle project click and display gallery
   const handleProjectClick = (project) => {
     setSelectedProject(project);
     setShowGallery(true);
@@ -85,11 +82,7 @@ function Projects() {
     <div className="projects-container beny_tm_news" id='project'>
       <Container>
         <Row>
-          {/* <div className="beny_tm_title_holder" data-aos="fade-up">
-            <span>Projects</span>
-            <h3>Recent Projects</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, egestas. Id fermentum nullam ipsum massa.</p>
-          </div> */}
+        
           <div className="section-title"  data-aos="fade-up">
             <h2>My Projects</h2>
           </div>
@@ -105,16 +98,13 @@ function Projects() {
                     onClick={() => handleProjectClick(project)}
                   />
                 </div>
-                {/* Display project details on hover */}
                 <div className="details">
                   <h3 className='title'>{project.title}</h3>
                   <p>{truncateDescription(project.description)}</p>
                   <div className="icons">
-                    {/* GitHub icon */}
                     <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                       <img src={GitIcon} alt='GitHub' title='GitHub' />
                     </a>
-                    {/* Web link icon */}
                     <a href={project.webLink} target="_blank" rel="noopener noreferrer">
                       <img src={WebIcon} alt='Website' title='Website' />
                     </a>
@@ -144,11 +134,9 @@ function Projects() {
                       <div className="gallery-modal-inner">
                         <h3 className='title'>{selectedProject.title}</h3>
                         <div className="icons">
-                          {/* GitHub icon */}
                           <a href={selectedProject.githubLink} target="_blank" rel="noopener noreferrer">
                             <img src={GitIcon} alt='GitHub' title='GitHub' />
                           </a>
-                          {/* Web link icon */}
                           <a href={selectedProject.websiteLink} target="_blank" rel="noopener noreferrer">
                             <img src={WebIcon} alt='Website' title='Website' />
                           </a>
@@ -164,12 +152,7 @@ function Projects() {
                                 <li key={index}>{skill}</li>
                               ))}
                             </ul>
-                          {/* <ul>
-                            <li>Javascript</li>
-                            <li>HTML5</li>
-                            <li>CSS</li>
-                          
-                          </ul> */}
+                         
                         </div>
                       </div>
                     </div>
