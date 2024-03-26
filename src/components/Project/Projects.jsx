@@ -40,7 +40,7 @@ function Projects() {
     {
       imageSrc: ProjectIcon3,
       title: 'Cosmic Collect',
-      description: 'Description of project Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+      description: 'Embark on a cosmic journey with Cosmic Collectibles, a full-stack web application developed in just one week. Built with React, Node.js, Express, and MongoDB, this project offers a curated collection of high-quality, unique items that celebrate the beauty and grandeur of space. With the integration of PayPal, we provide a secure and seamless payment experience, ensuring authenticity, quality, and a genuine connection to the cosmos.',
       githubLink: 'https://github.com/Behzad1983Rad/Project3-Frontend',
       webLink: 'https://cosmiccollect.netlify.app/',
       readmoreLink: 'https://github.com/Behzad1983Rad/Project3-Frontend/blob/main/README.md',
