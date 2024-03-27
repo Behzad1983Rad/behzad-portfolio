@@ -72,7 +72,6 @@ function Projects() {
     setShowGallery(true);
   };
 
-  // Function to close the gallery
   const handleCloseGallery = () => {
     setShowGallery(false);
     setSelectedProject(null);
@@ -91,11 +90,12 @@ function Projects() {
           {projects.map((project, index) => (
             <div className="col-md-3" key={index}>
               <div className="project-item list_inner">
-                <div className='image'>
+                <div className='image' style={{ height: '200px' }}>
                   <img
                     src={project.imageSrc}
                     alt={project.title}
                     onClick={() => handleProjectClick(project)}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 </div>
                 <div className="details">
@@ -122,12 +122,28 @@ function Projects() {
               <div className='padding_100'>
                 <div className='modal_opened_overlay'>
                   <Row>
-                    <div className="col-md-6">
+                    <div className="col-md-6" style={{display: "flex", alignContent: "center" , alignItems:"center"}}>
                       <div className='gallery-modal-left'>
-                        <div className="close-gallery" onClick={handleCloseGallery}>
+                        <div className="close-gallery" onClick={handleCloseGallery} style={{position: 'absolute', top: '10px', left: '10px'}}
+>
                           <img src={CloseIcon} alt='Close' title='Close' />
                         </div>
-                        <img src={selectedProject.imageSrc} alt={selectedProject.title} />
+                        <img 
+                        src={selectedProject.imageSrc}
+                        alt={selectedProject.title}  style={{ 
+                          width: '90%', 
+                          height: 'auto', 
+                          maxWidth: '100%', 
+                          maxHeight: '80vh', 
+                          objectFit: 'contain', 
+                          display: 'block', 
+                          marginLeft: 'auto', 
+                          marginRight: 'auto' 
+                        }}
+                        
+
+
+                         />
                       </div>
                     </div>
                     <div className="col-md-6">
